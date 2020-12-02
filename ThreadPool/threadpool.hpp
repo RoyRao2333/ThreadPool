@@ -41,10 +41,6 @@ public:
     void resume();
     size_t available() { return this->spareThread; }
     
-private:
-    Task fetchTask();
-    void schedual();
-    
 //  MARK: - attributes
 private:
     vector<thread> pool;
