@@ -21,6 +21,9 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     try {
         ThreadPool pool { 4 };
+        
+        pool.resume();
+        
         future<void> f1 = pool.commit(foo_1);
         future<int> f2 = pool.commit(foo_2);
         future<string> f3 = pool.commit( []() -> string {
